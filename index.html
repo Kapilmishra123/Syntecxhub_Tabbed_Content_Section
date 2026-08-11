@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nexova | Premium Tabbed Content Section</title>
+
+  <!-- Font Awesome CDN (icons only, no other frameworks) -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Decorative animated gradient background -->
+  <div class="bg-decor">
+    <span class="blob blob-1"></span>
+    <span class="blob blob-2"></span>
+    <span class="blob blob-3"></span>
+  </div>
+
+  <main class="page">
+
+    <header class="page-header">
+      <span class="eyebrow">Frontend Internship Showcase</span>
+      <h1 class="page-title"><i class="fa-solid fa-layer-group"></i> Nexova</h1>
+      <p class="page-subtitle">A premium glassmorphism tabbed content section — pure HTML, CSS &amp; JavaScript</p>
+    </header>
+
+    <!-- ============ TABBED CONTENT SECTION ============ -->
+    <section class="tabs-section glass-card" aria-label="Company information tabs">
+
+      <!-- Tab List -->
+      <div class="tabs-list-wrap">
+        <div class="tabs-list" id="tabs-list" role="tablist" aria-label="Content sections">
+          <span class="tab-indicator" id="tab-indicator" aria-hidden="true"></span>
+
+          <button
+            class="tab-btn active"
+            id="tab-overview"
+            role="tab"
+            type="button"
+            aria-selected="true"
+            aria-controls="panel-overview"
+          >
+            <i class="fa-solid fa-house"></i> <span>Overview</span>
+          </button>
+
+          <button
+            class="tab-btn"
+            id="tab-features"
+            role="tab"
+            type="button"
+            aria-selected="false"
+            aria-controls="panel-features"
+            tabindex="-1"
+          >
+            <i class="fa-solid fa-bolt"></i> <span>Features</span>
+          </button>
+
+          <button
+            class="tab-btn"
+            id="tab-services"
+            role="tab"
+            type="button"
+            aria-selected="false"
+            aria-controls="panel-services"
+            tabindex="-1"
+          >
+            <i class="fa-solid fa-briefcase"></i> <span>Services</span>
+          </button>
+
+          <button
+            class="tab-btn"
+            id="tab-gallery"
+            role="tab"
+            type="button"
+            aria-selected="false"
+            aria-controls="panel-gallery"
+            tabindex="-1"
+          >
+            <i class="fa-solid fa-images"></i> <span>Gallery</span>
+          </button>
+
+          <button
+            class="tab-btn"
+            id="tab-contact"
+            role="tab"
+            type="button"
+            aria-selected="false"
+            aria-controls="panel-contact"
+            tabindex="-1"
+          >
+            <i class="fa-solid fa-envelope"></i> <span>Contact</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Panels Viewport -->
+      <div class="panels-viewport">
+
+        <!-- Loading shimmer shown briefly during a tab switch -->
+        <div class="panel-loader" id="panel-loader" aria-hidden="true">
+          <span class="spinner"></span>
+        </div>
+
+        <!-- ===== OVERVIEW PANEL ===== -->
+        <article
+          class="tab-panel active"
+          id="panel-overview"
+          role="tabpanel"
+          aria-labelledby="tab-overview"
+          tabindex="0"
+        >
+          <div class="panel-grid">
+            <div class="panel-copy">
+              <span class="panel-tag"><i class="fa-solid fa-house"></i> Overview</span>
+              <h2>Building Digital Experiences That Matter</h2>
+              <p>
+                Nexova helps startups and enterprises design, build, and scale premium digital
+                products. From pixel-perfect interfaces to resilient back-end systems, our team
+                blends craftsmanship with modern engineering practices.
+              </p>
+
+              <div class="stat-row">
+                <div class="stat-box">
+                  <span class="stat-value">120+</span>
+                  <span class="stat-label">Projects Delivered</span>
+                </div>
+                <div class="stat-box">
+                  <span class="stat-value">98%</span>
+                  <span class="stat-label">Client Satisfaction</span>
+                </div>
+                <div class="stat-box">
+                  <span class="stat-value">10+</span>
+                  <span class="stat-label">Years Experience</span>
+                </div>
+              </div>
+
+              <button class="cta-btn">
+                Get Started <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+
+            <div class="panel-media">
+              <img
+                src="https://picsum.photos/id/180/900/700"
+                alt="Team collaborating around a laptop"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </article>
+
+        <!-- ===== FEATURES PANEL ===== -->
+        <article
+          class="tab-panel"
+          id="panel-features"
+          role="tabpanel"
+          aria-labelledby="tab-features"
+          tabindex="0"
+          hidden
+        >
+          <div class="panel-grid reverse">
+            <div class="panel-media">
+              <img
+                src="https://picsum.photos/id/119/900/700"
+                alt="Modern workspace with analytics dashboard"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="panel-copy">
+              <span class="panel-tag"><i class="fa-solid fa-bolt"></i> Features</span>
+              <h2>Everything You Need, Built In</h2>
+              <p>
+                Every product we ship comes packed with performance, security, and flexibility
+                at its core — so you can focus on growth instead of infrastructure.
+              </p>
+
+              <div class="feature-grid">
+                <div class="feature-item">
+                  <i class="fa-solid fa-gauge-high"></i>
+                  <div>
+                    <h4>Lightning Fast</h4>
+                    <p>Optimized for speed on every device.</p>
+                  </div>
+                </div>
+                <div class="feature-item">
+                  <i class="fa-solid fa-shield-halved"></i>
+                  <div>
+                    <h4>Secure by Design</h4>
+                    <p>Best-practice security baked into every layer.</p>
+                  </div>
+                </div>
+                <div class="feature-item">
+                  <i class="fa-solid fa-mobile-screen"></i>
+                  <div>
+                    <h4>Fully Responsive</h4>
+                    <p>Looks flawless on any screen size.</p>
+                  </div>
+                </div>
+                <div class="feature-item">
+                  <i class="fa-solid fa-puzzle-piece"></i>
+                  <div>
+                    <h4>Easy Integration</h4>
+                    <p>Plug into your existing stack effortlessly.</p>
+                  </div>
+                </div>
+              </div>
+
+              <button class="cta-btn">
+                Explore Features <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- ===== SERVICES PANEL ===== -->
+        <article
+          class="tab-panel"
+          id="panel-services"
+          role="tabpanel"
+          aria-labelledby="tab-services"
+          tabindex="0"
+          hidden
+        >
+          <div class="panel-grid">
+            <div class="panel-copy">
+              <span class="panel-tag"><i class="fa-solid fa-briefcase"></i> Services</span>
+              <h2>Services Tailored to Your Goals</h2>
+              <p>
+                Whether you're launching an MVP or scaling an enterprise platform, our service
+                packages are designed to meet you where you are.
+              </p>
+
+              <div class="service-list">
+                <div class="service-item">
+                  <i class="fa-solid fa-code"></i>
+                  <span>Web &amp; App Development</span>
+                </div>
+                <div class="service-item">
+                  <i class="fa-solid fa-palette"></i>
+                  <span>UI / UX Design</span>
+                </div>
+                <div class="service-item">
+                  <i class="fa-solid fa-cloud"></i>
+                  <span>Cloud &amp; DevOps</span>
+                </div>
+                <div class="service-item">
+                  <i class="fa-solid fa-chart-line"></i>
+                  <span>Product Strategy</span>
+                </div>
+              </div>
+
+              <button class="cta-btn">
+                View Pricing <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+
+            <div class="panel-media">
+              <img
+                src="https://picsum.photos/id/3/900/700"
+                alt="Developer writing code on a laptop"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </article>
+
+        <!-- ===== GALLERY PANEL ===== -->
+        <article
+          class="tab-panel"
+          id="panel-gallery"
+          role="tabpanel"
+          aria-labelledby="tab-gallery"
+          tabindex="0"
+          hidden
+        >
+          <div class="panel-copy panel-copy-full">
+            <span class="panel-tag"><i class="fa-solid fa-images"></i> Gallery</span>
+            <h2>A Glimpse Into Our Work</h2>
+            <p>A curated look at recent projects, workspaces, and product moments.</p>
+          </div>
+
+          <div class="gallery-grid">
+            <img src="https://picsum.photos/id/48/500/500" alt="Product design mockup" loading="lazy" />
+            <img src="https://picsum.photos/id/96/500/500" alt="Team brainstorming session" loading="lazy" />
+            <img src="https://picsum.photos/id/60/500/500" alt="Office workspace setup" loading="lazy" />
+            <img src="https://picsum.photos/id/26/500/500" alt="Close-up of code on screen" loading="lazy" />
+            <img src="https://picsum.photos/id/65/500/500" alt="Whiteboard planning session" loading="lazy" />
+            <img src="https://picsum.photos/id/160/500/500" alt="Modern office interior" loading="lazy" />
+          </div>
+
+          <div class="gallery-cta-wrap">
+            <button class="cta-btn">
+              View Full Gallery <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </article>
+
+        <!-- ===== CONTACT PANEL ===== -->
+        <article
+          class="tab-panel"
+          id="panel-contact"
+          role="tabpanel"
+          aria-labelledby="tab-contact"
+          tabindex="0"
+          hidden
+        >
+          <div class="panel-grid reverse">
+            <div class="panel-media">
+              <img
+                src="https://picsum.photos/id/1076/900/700"
+                alt="Person typing an email on a laptop"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="panel-copy">
+              <span class="panel-tag"><i class="fa-solid fa-envelope"></i> Contact</span>
+              <h2>Let's Start a Conversation</h2>
+              <p>Have a project in mind? Reach out and our team will get back to you within 24 hours.</p>
+
+              <div class="contact-info">
+                <div class="contact-item">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>123 Innovation Ave, San Francisco, CA</span>
+                </div>
+                <div class="contact-item">
+                  <i class="fa-solid fa-phone"></i>
+                  <span>+1 (555) 123-4567</span>
+                </div>
+                <div class="contact-item">
+                  <i class="fa-solid fa-envelope"></i>
+                  <span>hello@nexova.com</span>
+                </div>
+              </div>
+
+              <button class="cta-btn">
+                Send Message <i class="fa-solid fa-paper-plane"></i>
+              </button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
