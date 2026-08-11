@@ -1,0 +1,1 @@
+# Syntecxhub_Tabbed_Content_Section
